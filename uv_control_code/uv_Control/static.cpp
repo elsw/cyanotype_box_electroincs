@@ -1,4 +1,5 @@
 #include "static.h"
+#include "Arduino.h"
 
 const char KeypadPins::hexKeys[KeypadPins::ROWS][KeypadPins::COLS] = {
     {'1', '2', '3'},
@@ -7,5 +8,5 @@ const char KeypadPins::hexKeys[KeypadPins::ROWS][KeypadPins::COLS] = {
     {'*', '0', '#'}
   };
 
-const byte KeypadPins::rowPins[KeypadPins::ROWS] = {9, 8, 7, 6}; 
-const byte KeypadPins::colPins[KeypadPins::COLS] = {5, 4, 3}; 
+const byte KeypadPins::rowPins[KeypadPins::ROWS] = {11, A1 ,A2 , 13}; 
+const byte KeypadPins::colPins[KeypadPins::COLS] = {12, A4, A3}; 

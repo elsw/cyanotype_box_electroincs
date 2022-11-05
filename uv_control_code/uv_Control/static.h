@@ -1,13 +1,13 @@
 #pragma once
 #include "Arduino.h"
 
-enum class State
-{
-  USER_MESSAGE,
-  TIMER_INPUT,
-  POWER_INPUT,
-  POWERED
-};
+#define TOTAL_STATES 4
+#define USER_MSG_STATE 0
+#define TIMER_INPUT_STATE 1
+#define POWER_INPUT_STATE 2
+#define POWERED_STATE 3
+#define BACK_KEY '*'
+#define CONFIRM_KEY '#'
 
 class LCDPins
 {
