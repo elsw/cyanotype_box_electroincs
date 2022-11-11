@@ -2,10 +2,13 @@
 #include "Arduino.h"
 
 #define TOTAL_STATES 4
-#define USER_MSG_STATE 0
-#define TIMER_INPUT_STATE 1
-#define POWER_INPUT_STATE 2
-#define POWERED_STATE 3
+enum StateNames
+{
+  USER_MSG_STATE,
+  TIMER_INPUT_STATE,
+  POWER_INPUT_STATE,
+  POWERED_STATE
+};
 #define BACK_KEY '*'
 #define CONFIRM_KEY '#'
 

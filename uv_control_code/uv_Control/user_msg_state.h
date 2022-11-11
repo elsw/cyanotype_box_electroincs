@@ -4,15 +4,21 @@
 class UserMsgState : public State
 {
 public:
-  UserMsgState(LiquidCrystal *lcd):
-    State(lcd)
+  UserMsgState(LiquidCrystal *lcd,String top = "", String bottom = ""):
+    State(lcd),
+    top(top),
+    bottom(bottom)
   {
 
   }
 
-  virtual void Setup(String top = "", String bottom = "")
+  virtual void Setup()
   {
     lcd->clear();
+    lcd->setCursor(0,0);
+    lcd->print(top.c_str());
+    lcd->setCursor(0,1);
+    lcd->print(bottom.c_str());
   }
 
   virtual Result KeyCallback(KeypadEvent key)
@@ -35,4 +41,8 @@ public:
   {
   
   }
+
+private:
+  String top;
+  String bottom;
 };

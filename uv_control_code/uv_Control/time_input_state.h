@@ -12,7 +12,7 @@ public:
 
   }
 
-  virtual void Setup(String top = "", String bottom = "")
+  virtual void Setup()
   {
     lcd->clear();
     lcd->setCursor(0,0);

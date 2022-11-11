@@ -16,7 +16,8 @@ class State
       FAILURE
     };
 
-    virtual void Setup(String top = "", String bottom = "") = 0;
+    //virtual void SetArguments(int argc,int *argv[]);
+    virtual void Setup() = 0;
     virtual Result KeyCallback(KeypadEvent key) = 0;
     virtual int GetOutput() = 0;
 
