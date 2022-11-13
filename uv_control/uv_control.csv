@@ -1,0 +1,15 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"U1";"TO-252-2";1;"L7805";;;
+2;"R6";"R_0805_2012Metric";1;"1k";;;
+3;"A1";"Arduino_UNO_R2";1;"Arduino_UNO_R2";;;
+4;"J3";"JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical";1;"Fan";;;
+5;"R2,R3,R7,R1";"R_0805_2012Metric";4;"100R";;;
+6;"Q1,Q2";"SOT-23";2;"BSS138";;;
+7;"C1,C2";"C_1206_3216Metric";2;"100nf";;;
+8;"R5,R8,R4";"R_0805_2012Metric";3;"10K";;;
+9;"U2";"SOT-23-5";1;"MCP1415";;;
+10;"J5";"AMASS_XT60-F_1x02_P7.20mm_Vertical";1;"Light Power";;;
+11;"Q3";"TO-263-7_TabPin8";1;"IRFS7730-7";;;
+12;"J2";"JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical";1;"Safety";;;
+13;"J4";"AMASS_XT60-M_1x02_P7.20mm_Vertical";1;"12V Power";;;
+14;"J1";"JST_EH_B7B-EH-A_1x07_P2.50mm_Vertical";1;"Keypad";;;
