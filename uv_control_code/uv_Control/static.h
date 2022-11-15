@@ -1,16 +1,22 @@
 #pragma once
 #include "Arduino.h"
 
-#define TOTAL_STATES 4
+#define TOTAL_STATES 5
 enum StateNames
 {
-  USER_MSG_STATE,
-  TIMER_INPUT_STATE,
-  POWER_INPUT_STATE,
-  POWERED_STATE
+  STATE_WELCOME,
+  STATE_TIMER_INPUT,
+  STATE_POWER_INPUT,
+  STATE_POWERED,
+  STATE_SAFETY_ERROR
 };
 #define BACK_KEY '*'
 #define CONFIRM_KEY '#'
+
+#define PWR_EN_PIN 2
+#define SAFETY_PIN 3
+#define STATUS_LED_PIN 10
+#define SAFETY_LED_PIN A5
 
 class LCDPins
 {
