@@ -1,3 +1,4 @@
+#include "static.h"
 #pragma once
 #include "state.h"
 
@@ -12,34 +13,53 @@ public:
 
   virtual void Setup()
   {
+    State::Setup();
     lcd->clear();
     lcd->setCursor(0,0);
-    lcd->print("Input Time:");
+    lcd->print("Input Power:");
     lcd->setCursor(0,1);
-    time = "0000";
+    power = "";
   }
 
-  virtual Result KeyCallback(KeypadEvent key)
+  virtual void KeyCallback(KeypadEvent key)
   {
     if(key == BACK_KEY)
     {
-      result = Result::FAILURE;
+      if(power == "")
+      {
+        result = Result::FAILURE;
+        next_state = STATE_TIMER_INPUT;
+      }
+      else
+      {
+        Setup();
+      }
     }
     else if(key == CONFIRM_KEY)
     {
       result = Result::SUCCESS;
+      next_state = STATE_POWERED;
     }
     else
     {
-      
+      //Add key to power number
+      power += key;
+      lcd->setCursor(0,1);
+      lcd->print(power);
     }
   }
 
   virtual int GetOutput()
   {
+    return power.toInt();
+  }
 
+  virtual int GetNextState()
+  {
+    return next_state;
   }
 
 private:
-  String time;
+  String power;
+  int next_state;
 };
