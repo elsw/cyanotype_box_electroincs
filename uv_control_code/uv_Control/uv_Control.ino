@@ -70,9 +70,6 @@ void loop()
   int safety_ok = digitalRead(SAFETY_PIN);
   digitalWrite(SAFETY_LED_PIN,safety_ok);
 
-  Serial.write(String(safety_ok).c_str());
-  delay(1000);
-
   if(current_state < TOTAL_STATES)
   { 
     states[current_state]->Update(delta_millis);
