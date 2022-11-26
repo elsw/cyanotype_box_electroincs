@@ -45,11 +45,8 @@ public:
     else
     {
       //Add number to the end of the string, pushing the rest to the left
-      Serial.println(time.c_str());
       time = time.substring(1,4);
-      Serial.println(time.c_str());
       time += String(key);
-      Serial.println(time.c_str());
       lcd->setCursor(0,1);
       lcd->print(time.substring(0,2) + ":" + time.substring(2,4));
     }
@@ -57,8 +54,10 @@ public:
 
   virtual int GetOutput()
   {
-    int seconds = time.substring(2,2).toInt();
+    int seconds = time.substring(2,4).toInt();
     int minutes = time.substring(0,2).toInt();
+    String msg = "seconds " + String(seconds) + " minutes " + String(minutes) + " total seconds " + String((minutes * 60) + seconds);
+    Serial.write(msg.c_str());
     return (minutes * 60) + seconds;
   }
 

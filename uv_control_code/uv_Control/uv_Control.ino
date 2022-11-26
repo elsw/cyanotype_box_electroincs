@@ -57,6 +57,10 @@ void setup()
  current_state = 0;
  states[current_state]->Setup();
  last_millis = millis();
+
+ //init all outputs to 0
+ for(unsigned i = 0 ; i < TOTAL_STATES ; i++)
+  outputs[i] = 0;
 }
 
 void loop()
@@ -77,8 +81,6 @@ void loop()
     State::Result result = states[current_state]->GetResult();
     if(result != State::Result::WAITING)
     {
-      String print = String("Got Result") + String(static_cast<int>(result));
-      Serial.write(print.c_str());
       if(result == State::Result::SUCCESS)
       {
         outputs[current_state] = states[current_state]->GetOutput();
