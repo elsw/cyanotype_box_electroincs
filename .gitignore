@@ -1,4 +1,4 @@
-uv_control/uv_control-backups
+*.zip
 uv_control/export
 uv_light_board/uv_light_board-backups
 uv_light_board/export

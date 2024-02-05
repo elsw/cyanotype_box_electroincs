@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "uv_control")(type "KiCad")(uri "${KIPRJMOD}/uv_control.kicad_sym")(options "")(descr ""))
+  (lib (name "user_panel")(type "KiCad")(uri "C:/Users/Steve/Downloads/prod-xnaut-hardware-18-interface-panel/prod-xnaut-hardware-18-interface-panel/PCB/Interface_Panel/User Panel/user_panel.kicad_sym")(options "")(descr ""))
+)
